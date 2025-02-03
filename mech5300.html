@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>MECH.5300 &#8201;&mdash;&#8201; Autonomous Robotic Systems</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Ioannis A. Raptis</div>
+<div class="menu-item"><a href="home.html">Home</a></div>
+<div class="menu-item"><a href="biography.html">Biography</a></div>
+<div class="menu-item"><a href="Ioannis_Raptis_cv.pdf">Detailed&nbsp;CV</a></div>
+<div class="menu-category">Teaching</div>
+<div class="menu-item"><a href="courses.html">Courses</a></div>
+<div class="menu-item"><a href="mech5300.html" class="current">ECEN&nbsp;685/885</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="publications.html">Publications</a></div>
+<div class="menu-item"><a href="projects.html">Projects</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>MECH.5300 &#8201;&mdash;&#8201; Autonomous Robotic Systems</h1>
+</div>
+<h2>Course Description</h2>
+<p>This course covers concepts related to autonomous robotic systems, emphasizing the synthesis and design of control algorithms
+for autonomous robotic vehicles. Topics that are covered in the course include: rigid body equations of motion in three dimensions,
+dynamic model derivation of aerial, space, marine and ground vehicles,
+fundamentals of flight dynamics, feedback control design for autonomous robotic vehicles,
+guidance and navigation, and a description of components typically encountered to autonomous robotic vehicles. </p>
+<p>This is one of the few course offerings at a national level that provides a comprehensive and coherent presentation of a broad range of mathematical topics
+related to autonomous robotic vehicles. With the fast development of autonomous robotic vehicles, both ground and aerial, there is a critical
+need to expose students from diverse disciplines of engineering, computer and science to this emerging research area. </p>
+<h2>Course Goals</h2>
+<ol>
+<li><p>Develop mathematical tools for the analysis of robotic vehicles motion.</p>
+</li>
+<li><p>Introduce engineering concepts related to autonomous robots.</p>
+</li>
+<li><p>Provide a concise and comprehensive description of the key concepts and technologies underlying the dynamics, control and guidance of several types of autonomous robotic vehicles.</p>
+</li>
+<li><p>Enable students with an introductory-level background in controls or robotics to enter the area of autonomous robotic systems.</p>
+</li>
+<li><p>Develop proficiency in MATLAB/SIMULINK programming tools related to the simulation of robotic vehicles.</p>
+</li>
+<li><p>Motivate interested students in pursuit of advanced studies in topics related to autonomy and controls.</p>
+</li>
+</ol>
+<h2>List of Tentative Topics</h2>
+<ol>
+<li><p>Kinematics of differential-drive robots</p>
+</li>
+<li><p>Waypoint navigation</p>
+</li>
+<li><p>Dubins paths</p>
+</li>
+<li><p>Straight-line and orbit following</p>
+</li>
+<li><p>Navigation potential functions</p>
+</li>
+<li><p>Kinematics and Dynamics in the 3-D space</p>
+</li>
+<li><p>Autopilot design using successive loop closure</p>
+</li>
+<li><p>Modeling and control of Helicopters/Quadrotors</p>
+</li>
+<li><p>Sensors for MAVs</p>
+</li>
+</ol>
+<h2>Activities &ndash; Tasks</h2>
+<table class="imgtable"><tr><td>
+<img src="waypoints.gif" alt="" width="200px" height="153px" />&nbsp;</td>
+<td align="left"><p>Implementation of waypoint control, guidance and path planning algorithms for wheeled mobile robots.
+The goal here is to have a unicycle robot follow a sequence of destination waypoints that form a path.
+The first challenge involves the implementation of a low-level nonlinear control law that drives the robot to a destination waypoint.
+Then, a guidance law based on vector fields, is introduced that converges the robot asymptotically to straight line segments and 
+circular orbits. A high-level path planner is used in conjunction with the guidance law to drive the robot robustly
+through a sequence of waypoints. </p>
+</td></tr></table>
+<table class="imgtable"><tr><td>
+<img src="startrek.jpg" alt="" width="200px" height="153px" />&nbsp;</td>
+<td align="left"><p>Create a 3-D graphic of an aircraft in MATLAB. This animation will be used to visualize the motion of the vehicle.
+Familiarization with MATLAB's figure handles for designing highly quality illustrations of aircraft simulations.
+A preliminary description of the different coordinate frames is given. </p>
+</td></tr></table>
+<table class="imgtable"><tr><td>
+<img src="NED.jpg" alt="" width="200px" height="153px" />&nbsp;</td>
+<td align="left"><p>Translate and rotate rigid bodies using MATLAB. Use the Direction Cosine Matrix (DCM) to transform the coordinates
+between an inertial and a moving body-fixed frame. Illustrate in MATLAB figures, rigid bodies 
+with coordinates expressed with respect to the North East Down (NED) convention. Use MATLAB to animate the position and orientation of 
+a rigid body.</p>
+</td></tr></table>
+<table class="imgtable"><tr><td>
+<img src="satellite.gif" alt="" width="200px" height="153px" />&nbsp;</td>
+<td align="left"><p>Implement the 3-D rigid body's equations of motion in MATLAB/SIMULINK. Use the S-Function block to integrate the nonlinear dynamics
+of a rigid body with six Degrees of Freedom (DoF). Record the motion variables of a rigid body for different values
+of its external wrench (force/moment vectors).   </p>
+</td></tr></table>
+<table class="imgtable"><tr><td>
+<img src="quadcopter.gif" alt="" width="200px" height="153px" />&nbsp;</td>
+<td align="left"><p>Use a Simulink/MATLAB simulator to control an autonomous quadrotor. Design an autopilot using successive loop closure.
+Tune the gains of Proportional Derivative (PD) compensators that stabilize the yaw, heave, longitudinal and lateral loops of the quadcopter.
+Study the effect of saturation constraints to the bandwidth of the feedback control system. Experiment with different types of
+trajectories and observe the effect of discontinuities to the response of the aircraft. Investigate the effect of
+parametric uncertainties and external disturbances from wind gusts, and  implementation of an integral compensator 
+to attenuate their effect. </p>
+</td></tr></table>
+<div id="footer">
+<div id="footer-text">
+Page generated 2020-07-14 16:12:26 Eastern Daylight Time, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
